@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Video with Lyrics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a3c1ad;
+            color:white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #%f9ea0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin-bottom: 20px;
+           
+        }
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+        }
+        .lyrics-container {
+            display: none;
+            margin-top: 20px;
+            size:30px;
+            background-color: #49796b;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .lyrics-container.active {
+            display: block;
+        }
+        .toggle-lyrics-btn {
+            padding: 10px 15px;
+            background-color: #317873;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h1{
+            Font-size:30px; 
+
+
+        }
+        span{
+            background-color:#49796b;
+            border-radius: 10px;
+            padding:12px;
+        }
+    </style>
+</head>
+<body> 
+ 
+    <div class="container">
+     <h1><span><b>Neverita - Badbunny</b></span></h1>
+        <div class="video-container">
+            
+            <iframe width="1080" height="1080" src="videoplayback.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <button class="toggle-lyrics-btn" onclick="toggleLyrics()">S h o w  L y r i c s</button>
+        <div class="lyrics-container" id="lyricsContainer">
+            
+            <pre>Yo estoy puesto pa ti y tú te me quitas
+Diablo, qué piquete la chamaquita
+El corazón lo puso en la neverita
+Dice que este verano se queda solita
+Yo estoy puesto pa ti y tú te me quitas
+Diablo, qué piquete la chamaquita
+El corazón lo puso en la neverita
+Dice que este verano se queda solita
+Pero nunca sola, sola
+Amores vienen y van, como las olas
+El DM explotao, tos le escriben: "hola"
+Una fila cabrona y yo quiero la cola
+Yeh, yeh, yeh
+Déjame untarte el sunblock pa que no te quemes
+Aquí hay muchas nenas lindas, pero tú la tienes
+Jugar conmigo, eso te entretiene
+No seas mala, me tienes de meme
+Me siento como el sol, ey
+Cuando te pones sunblock
+Baby, déjame entrar, dale, quítame el lock, ey
+Que me la pasaría contigo viendo TikTok
+Déjame sorprenderte, ey
+Déjame untarte el sunblock pa que no te quemes
+Aquí hay muchas nenas lindas, pero tú la tienes
+Jugar conmigo, eso te entretiene
+No seas mala, me tienes de meme
+Yo estoy puesto pa ti y tú te me quitas
+Diablo, qué piquete la chamaquita
+El corazón lo puso en la neverita
+Dice que este verano se queda solita
+Pero nunca sola, sola
+Amores vienen y van, como las olas
+Tú lo que eres e'una abusadora
+Vo' a buscarte una cerveza y de vez el cora
+Yeh, yeh, yeh</pre>
+        </div>
+    </div>
+
+    <script>
+        function toggleLyrics() {
+            var lyricsContainer = document.getElementById("lyricsContainer");
+            lyricsContainer.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
